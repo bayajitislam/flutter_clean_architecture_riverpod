@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/config/app_env.dart';
 import 'package:flutter_clean_architecture_riverpod/core/extensions/context_extensions.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/p
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/widgets/login_form.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/responsive_body.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});

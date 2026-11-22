@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/features/showcase/presentation/layout/showcase_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   Future<void> pumpWidth(WidgetTester tester, double width) {

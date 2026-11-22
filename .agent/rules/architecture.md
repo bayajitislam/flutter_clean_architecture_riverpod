@@ -28,7 +28,7 @@ Create `screens/tablet` and `screens/desktop` only when that layout differs from
 ## Dependency direction
 
 ```text
-presentation -> domain -> (nothing in Flutter or Dio)
+presentation -> domain -> (nothing in Flutter, material_ui, or Dio)
 data -> domain
 data -> core
 presentation -> core

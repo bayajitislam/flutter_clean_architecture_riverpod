@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/icons/app_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// A section of the layout reference. The three screens share this list.
 class ShowcaseSection {

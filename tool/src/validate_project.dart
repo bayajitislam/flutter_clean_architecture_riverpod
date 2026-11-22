@@ -109,6 +109,7 @@ const requiredDependencies = [
   'shared_preferences',
   'flutter_devlog',
   'remixicon',
+  'material_ui',
 ];
 
 class ValidateReport {
@@ -730,7 +731,10 @@ bool _isHandWrittenDart(String path) {
 }
 
 bool _isFlutterOrDio(String uri) {
-  return uri.startsWith('package:flutter/') || uri.startsWith('package:dio/');
+  return uri.startsWith('package:flutter/') ||
+      uri.startsWith('package:material_ui/') ||
+      uri.startsWith('package:cupertino_ui/') ||
+      uri.startsWith('package:dio/');
 }
 
 _FeatureLocation? _featureLocation(String relative) {

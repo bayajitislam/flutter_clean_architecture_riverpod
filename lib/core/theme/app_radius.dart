@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Corner radii. [circular] is large enough for pills and avatars.
 abstract final class AppRadius {

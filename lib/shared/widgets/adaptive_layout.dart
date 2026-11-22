@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/enums/screen_size.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Picks a layout from the width [LayoutBuilder] receives.
 ///

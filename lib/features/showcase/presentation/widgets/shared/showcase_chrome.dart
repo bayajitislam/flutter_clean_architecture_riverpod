@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/features/showcase/presentation/providers/showcase_controller.dart';
 import 'package:flutter_clean_architecture_riverpod/features/showcase/presentation/widgets/shared/showcase_detail.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/adaptive_navigation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Shared chrome. Each screen chooses the navigation style.
 class ShowcaseChrome extends ConsumerWidget {

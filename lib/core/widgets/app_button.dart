@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Primary action button used by feature screens.
 class AppButton extends StatelessWidget {

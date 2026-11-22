@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/extensions/context_extensions.dart';
 import 'package:flutter_clean_architecture_riverpod/core/icons/app_icons.dart';
 import 'package:flutter_clean_architecture_riverpod/core/routing/route_paths.dart';
@@ -9,6 +8,7 @@ import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/p
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/responsive_body.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});

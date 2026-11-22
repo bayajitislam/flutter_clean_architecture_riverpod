@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/app.dart';
 import 'package:flutter_clean_architecture_riverpod/core/config/app_env.dart';
 import 'package:flutter_clean_architecture_riverpod/core/extensions/context_extensions.dart';
@@ -7,6 +6,7 @@ import 'package:flutter_clean_architecture_riverpod/core/theme/theme_mode_contro
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/providers/auth_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_button.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_text_field.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Email and password fields for [LoginScreen].
 class LoginForm extends StatelessWidget {

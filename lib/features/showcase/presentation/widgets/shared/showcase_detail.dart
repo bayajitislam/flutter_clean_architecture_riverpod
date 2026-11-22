@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/features/showcase/presentation/providers/showcase_controller.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Detail pane used by every showcase layout.
 class ShowcaseDetail extends StatelessWidget {

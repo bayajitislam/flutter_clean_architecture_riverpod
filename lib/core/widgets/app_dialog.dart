@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Confirmation dialog. Returns `true` only when the confirm action is chosen.
 Future<bool> showAppConfirmDialog(

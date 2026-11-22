@@ -19,4 +19,5 @@ The version in `pubspec.yaml` is the template version. No public release has bee
 ### Changed
 
 - Project identity is now Flutter Clean Architecture Riverpod (`flutter_clean_architecture_riverpod`, `com.flutter.cleanarchitectureriverpod`).
+- Material imports use `package:material_ui/material_ui.dart` instead of `package:flutter/material.dart`.
 - `cupertino_icons` was replaced by Remix Icon through `AppIcons`, which also exposes Flutter's built-in icons.

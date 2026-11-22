@@ -235,7 +235,7 @@ final ${camel}ControllerProvider =
     '$base/screens/${feature}_screen.dart':
         '''
 import 'package:$packageName/features/$feature/presentation/providers/${names.typeSnake}_providers.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ${featureName}Screen extends ConsumerWidget {
@@ -484,7 +484,7 @@ import 'package:$packageName/core/widgets/app_error_view.dart';
 import 'package:$packageName/core/widgets/app_loading.dart';
 import '$importBase/presentation/providers/${type}_providers.dart';
 import '$importBase/presentation/widgets/${type}_summary.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ${featureName}Screen extends ConsumerWidget {
@@ -514,7 +514,7 @@ class ${featureName}Screen extends ConsumerWidget {
 String _summary(String importBase, String type, String typeName) {
   return '''
 import '$importBase/domain/entities/$type.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ${typeName}Summary extends StatelessWidget {
   const ${typeName}Summary({required this.item, super.key});
@@ -574,7 +574,7 @@ String _screenTest(
 ) {
   return '''
 import '$importBase/presentation/screens/${feature}_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 

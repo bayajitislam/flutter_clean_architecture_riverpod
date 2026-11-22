@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_colors.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_radius.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_theme_extensions.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_typography.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Material 3 light and dark themes built from the shared tokens.
 abstract final class AppTheme {

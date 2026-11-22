@@ -20,6 +20,7 @@ This is a production-oriented Flutter application built with feature-first clean
 - Flutter Secure Storage for tokens
 - Shared preferences for non-sensitive settings
 - flutter_devlog for logging, through `AppLogger`
+- `material_ui` for Material widgets
 - Repository contracts in the domain layer
 
 Do not add a second state manager, router, or HTTP client. Do not add a package that the task does not need. Freezed rules are in `.agent/rules/code_generation.md`.
@@ -27,7 +28,7 @@ Do not add a second state manager, router, or HTTP client. Do not add a package 
 ## Architecture
 
 - Keep each feature under `lib/features/<feature>/{data,domain,presentation}`.
-- Domain code must not import Flutter, Dio, or a data-source implementation.
+- Domain code must not import Flutter, `material_ui`, Dio, or a data-source implementation.
 - Presentation calls use cases. Screens and widgets do not call Dio or import a feature `data` folder.
 - Wire Dio and repository implementations in `data/providers`. A presentation provider may import that file for the same feature.
 - Data sources do not import widgets.

@@ -102,7 +102,7 @@ void main() {
     final root = Directory.systemTemp.createTempSync('awesome_arch_');
     addTearDown(() => root.deleteSync(recursive: true));
     _write(root, 'lib/features/billing/domain/entities/bill.dart', '''
-// import "package:flutter/material.dart";
+// import "package:material_ui/material_ui.dart";
 /// import 'package:dio/dio.dart';
 const example = "import 'package:flutter/widgets.dart';";
 import '../../billing/domain/entities/other.dart';
@@ -117,7 +117,7 @@ import '../../billing/domain/entities/other.dart';
     _write(
       root,
       'lib/features/billing/domain/entities/bill.dart',
-      'import "package:flutter/material.dart";\n',
+      'import "package:material_ui/material_ui.dart";\n',
     );
     _write(
       root,

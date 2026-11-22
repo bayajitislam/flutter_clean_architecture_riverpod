@@ -50,7 +50,8 @@ The full tour is in [docs/architecture/overview.md](docs/architecture/overview.m
 - Flutter Secure Storage for tokens
 - SharedPreferences for theme and other simple preferences
 - flutter_devlog, through `AppLogger`
-- Remix Icon, through `AppIcons`, which also exposes Flutter's built-in icons
+- `material_ui` for Material widgets (not `package:flutter/material.dart`)
+- Remix Icon, through `AppIcons`, which also exposes Material `Icons`
 
 Why these packages were chosen is in [docs/architecture/dependencies.md](docs/architecture/dependencies.md).
 

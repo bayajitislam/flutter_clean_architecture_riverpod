@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_colors.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_radius.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_theme.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_theme_extensions.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   test('light theme uses the brand seed and shared component styles', () {

@@ -12,7 +12,8 @@ Each direct dependency has one job. Do not add a second package for that job.
 | `flutter_secure_storage` | Session token and email. | BSD-3-Clause |
 | `shared_preferences` | Theme mode and other non-sensitive settings. | BSD-3-Clause |
 | `flutter_devlog` | Logging, only through `AppLogger`. | MIT |
-| `remixicon` | Remix glyphs used by `AppIcons`. Flutter's own `Icons` stay available on that class. | MIT |
+| `remixicon` | Remix glyphs used by `AppIcons`. Material `Icons` stay available on that class. | MIT |
+| `material_ui` | Material widgets and themes. Prefer this over `package:flutter/material.dart`. | BSD-3-Clause |
 | `flutter_lints` | Analyzer rules. | BSD-3-Clause |
 | `args` | CLI parsing in `tool/`. | BSD-3-Clause |
 | `yaml` | Reads `tool/project_identity.yaml` and pubspec checks. | MIT |

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/adaptive_layout.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
   testWidgets('switches layout when the available width changes', (

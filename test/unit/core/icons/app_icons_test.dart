@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/icons/app_icons.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:remixicon/remixicon.dart';
 
 void main() {

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Centered progress indicator for screens that are waiting on startup.
 class AppLoading extends StatelessWidget {

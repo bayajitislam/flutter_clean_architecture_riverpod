@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/data/datasources/fake_auth_remote_data_source.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/data/providers/auth_data_providers.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/screens/login_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../support/memory_token_storage.dart';
 

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/features/showcase/presentation/widgets/shared/showcase_chrome.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/enums/screen_size.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/adaptive_navigation.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ShowcaseTabletScreen extends StatelessWidget {
   const ShowcaseTabletScreen({super.key});

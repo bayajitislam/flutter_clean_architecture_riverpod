@@ -168,7 +168,7 @@ void main() {
     _write(
       root,
       'lib/features/billing/domain/entities/bill.dart',
-      "import 'package:flutter/material.dart';\n",
+      "import 'package:material_ui/material_ui.dart';\n",
     );
 
     const packageName = 'flutter_clean_architecture_riverpod';

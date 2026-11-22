@@ -440,7 +440,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         'package:$packageName/core/theme/app_spacing.dart',
         'package:$packageName/core/theme/theme_mode_controller.dart',
         'package:$packageName/shared/widgets/responsive_body.dart',
-        'package:flutter/material.dart',
+        'package:material_ui/material_ui.dart',
         'package:flutter_riverpod/flutter_riverpod.dart',
       ],
       '''

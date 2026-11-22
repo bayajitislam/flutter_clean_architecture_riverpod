@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_button.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Full-width message for a failed screen.
 class AppErrorView extends StatelessWidget {
