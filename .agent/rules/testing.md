@@ -15,7 +15,7 @@ Run this before finishing:
 dart format .
 flutter analyze
 flutter test
-dart run :awesome validate
+dart run :fcar validate
 ```
 
 CI runs the same checks, then builds the web app and checks that committed generated files still match `build_runner`.

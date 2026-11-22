@@ -5,6 +5,7 @@ import 'package:flutter_clean_architecture_riverpod/core/extensions/context_exte
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/utils/validators.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/domain/entities/credentials.dart';
+import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/auth_strings.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/providers/auth_providers.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/widgets/login_form.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/responsive_body.dart';
@@ -62,11 +63,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           child: ListView(
             padding: const EdgeInsets.all(AppSpacing.large),
             children: [
-              const SizedBox(height: 48),
+              const SizedBox(height: AppSpacing.extraLarge + AppSpacing.large),
               Text(appName, style: context.textTheme.headlineMedium),
               const SizedBox(height: AppSpacing.small),
               Text(
-                'Sign in to continue',
+                AuthStrings.signInSubtitle,
                 style: context.textTheme.bodyLarge?.copyWith(
                   color: context.colors.onSurfaceVariant,
                 ),

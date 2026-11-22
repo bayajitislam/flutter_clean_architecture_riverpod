@@ -8,7 +8,7 @@ A starter kit is copied into many apps. If every screen reaches into a shared AP
 
 Each feature lives in `lib/features/<feature>` and is split into `data`, `domain`, and `presentation` only when those layers earn their place. Domain code does not import Flutter or Dio. Screens call use cases. Cross-feature widgets live in `lib/shared`. Infrastructure lives in `lib/core`.
 
-`awesome validate` rejects imports that cross those boundaries.
+`fcar validate` rejects imports that cross those boundaries.
 
 ## Alternatives considered
 

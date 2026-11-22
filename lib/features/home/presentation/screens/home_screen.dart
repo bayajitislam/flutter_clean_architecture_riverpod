@@ -1,9 +1,11 @@
+import 'package:flutter_clean_architecture_riverpod/core/constants/theme_strings.dart';
 import 'package:flutter_clean_architecture_riverpod/core/extensions/context_extensions.dart';
 import 'package:flutter_clean_architecture_riverpod/core/icons/app_icons.dart';
 import 'package:flutter_clean_architecture_riverpod/core/routing/route_paths.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/theme/theme_mode_controller.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_dialog.dart';
+import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/auth_strings.dart';
 import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/providers/auth_providers.dart';
 import 'package:flutter_clean_architecture_riverpod/shared/widgets/responsive_body.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,7 +23,7 @@ class HomeScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text(AuthStrings.homeTitle),
         actions: [
           IconButton(
             tooltip: _nextTheme(themeMode).tooltip,
@@ -37,29 +39,40 @@ class HomeScreen extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Signed in', style: context.textTheme.headlineSmall),
+              Text(
+                AuthStrings.signedIn,
+                style: context.textTheme.headlineSmall,
+              ),
               const SizedBox(height: AppSpacing.small),
               Text(email, style: context.textTheme.bodyLarge),
               const SizedBox(height: AppSpacing.large),
-              OutlinedButton(
-                onPressed: () => context.go(RoutePaths.showcase),
-                child: const Text('Layout reference'),
+              Semantics(
+                button: true,
+                label: AuthStrings.layoutReference,
+                child: OutlinedButton(
+                  onPressed: () => context.go(RoutePaths.showcase),
+                  child: const Text(AuthStrings.layoutReference),
+                ),
               ),
-              const SizedBox(height: 12),
-              OutlinedButton(
-                onPressed: () async {
-                  final confirmed = await showAppConfirmDialog(
-                    context,
-                    title: 'Sign out',
-                    message: 'Sign out of this device?',
-                    confirmLabel: 'Sign out',
-                  );
-                  if (!confirmed || !context.mounted) {
-                    return;
-                  }
-                  await ref.read(authControllerProvider.notifier).signOut();
-                },
-                child: const Text('Sign out'),
+              const SizedBox(height: AppSpacing.small),
+              Semantics(
+                button: true,
+                label: AuthStrings.signOut,
+                child: OutlinedButton(
+                  onPressed: () async {
+                    final confirmed = await showAppConfirmDialog(
+                      context,
+                      title: AuthStrings.signOutTitle,
+                      message: AuthStrings.signOutMessage,
+                      confirmLabel: AuthStrings.signOut,
+                    );
+                    if (!confirmed || !context.mounted) {
+                      return;
+                    }
+                    await ref.read(authControllerProvider.notifier).signOut();
+                  },
+                  child: const Text(AuthStrings.signOut),
+                ),
               ),
             ],
           ),
@@ -71,8 +84,14 @@ class HomeScreen extends ConsumerWidget {
 
 ({IconData icon, String tooltip}) _nextTheme(ThemeMode mode) {
   return switch (mode) {
-    ThemeMode.light => (icon: AppIcons.darkMode, tooltip: 'Use dark theme'),
-    ThemeMode.dark => (icon: AppIcons.systemMode, tooltip: 'Use system theme'),
-    ThemeMode.system => (icon: AppIcons.lightMode, tooltip: 'Use light theme'),
+    ThemeMode.light => (icon: AppIcons.darkMode, tooltip: ThemeStrings.useDark),
+    ThemeMode.dark => (
+      icon: AppIcons.systemMode,
+      tooltip: ThemeStrings.useSystem,
+    ),
+    ThemeMode.system => (
+      icon: AppIcons.lightMode,
+      tooltip: ThemeStrings.useLight,
+    ),
   };
 }

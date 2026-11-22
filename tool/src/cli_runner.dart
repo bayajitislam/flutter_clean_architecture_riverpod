@@ -17,7 +17,7 @@ import 'validate_project.dart';
 Future<int> runCli(List<String> args) async {
   final runner =
       CommandRunner<int>(
-          'awesome',
+          'fcar',
           'Create, rename, generate features, and validate a Flutter Clean Architecture Riverpod project.',
         )
         ..addCommand(CreateCommand())

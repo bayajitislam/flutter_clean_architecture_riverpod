@@ -1,7 +1,7 @@
 name: flutter_clean_architecture_riverpod
 description: Feature-first clean architecture Flutter starter with Riverpod
 publish_to: none
-version: 1.0.0+1
+version: 0.1.0+1
 
 environment:
   sdk: ^3.12.2
@@ -33,7 +33,7 @@ dev_dependencies:
   analyzer: ^10.2.0
 
 executables:
-  awesome: awesome
+  fcar: fcar
 
 flutter:
   uses-material-design: true

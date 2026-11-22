@@ -202,7 +202,7 @@ const _skippedCopyNames = {
   '.idea',
   '.symlinks',
   'Pods',
-  '.awesome-backup',
+  '.fcar-backup',
   'build',
   'coverage',
   'ephemeral',

@@ -21,7 +21,7 @@ The maintainers will investigate and coordinate a fix. Please give them time to 
 
 - Tokens are stored with Flutter Secure Storage. Passwords are not stored.
 - `env/*.json`, keystores, `key.properties`, and `local.properties` are gitignored.
-- `awesome create` does not copy local environment JSON, signing files, SDK path files, or crash logs into a new project.
+- `fcar create` does not copy local environment JSON, signing files, SDK path files, or crash logs into a new project.
 - HTTP logs record the method, path, and status code. They omit headers, query parameters, and bodies.
 - Example environment files ship with an empty `API_BASE_URL`.
 

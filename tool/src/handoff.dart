@@ -378,7 +378,7 @@ void _removeShowcase(Directory root) {
     (source) {
       final withoutButton = source.replaceAll(
         RegExp(
-          r'\n\s*OutlinedButton\(\s*\n\s*onPressed: \(\) => context\.go\(RoutePaths\.showcase\),[\s\S]*?\),\n\s*const SizedBox\(height: 12\),',
+          r'\n\s*Semantics\(\s*\n\s*button: true,\s*\n\s*label: AuthStrings\.layoutReference,\s*\n\s*child: OutlinedButton\(\s*\n\s*onPressed: \(\) => context\.go\(RoutePaths\.showcase\),[\s\S]*?\),\s*\n\s*\),\s*\n\s*const SizedBox\(height: AppSpacing\.small\),',
         ),
         '',
       );
@@ -397,6 +397,8 @@ void _removeAuth(Directory root, String packageName) {
   _deleteDirectory(root, 'test/unit/features/auth');
   _deleteFile(root, 'test/widget/login_screen_test.dart');
   _deleteFile(root, 'test/widget/app_theme_mode_test.dart');
+  _deleteFile(root, 'test/widget/auth_redirect_test.dart');
+  _deleteFile(root, 'test/widget/screenshot_capture_test.dart');
   _writeText(root, 'lib/core/routing/route_paths.dart', '''
 /// Route paths composed by the app router.
 abstract final class RoutePaths {
@@ -506,10 +508,12 @@ void _removeStarterCommunityFiles(Directory root) {
   }
   _deleteFile(root, 'test/unit/tool/handoff_test.dart');
   _deleteFile(root, 'test/integration/generated_app_test.dart');
+  _deleteFile(root, 'test/widget/screenshot_capture_test.dart');
   _deleteDirectory(root, '.github/ISSUE_TEMPLATE');
   _deleteDirectory(root, 'docs/decisions');
   _deleteDirectory(root, 'docs/guides');
   _deleteDirectory(root, 'docs/architecture');
+  _deleteDirectory(root, 'docs/screenshots');
 }
 
 void _writeApplicationDocs(
@@ -577,7 +581,7 @@ jobs:
       - run: dart format --output=none --set-exit-if-changed .
       - run: flutter analyze
       - run: flutter test
-      - run: dart run tool/awesome.dart validate
+      - run: dart run tool/fcar.dart validate
       - run: flutter build web
 ''');
   _writeManifest(
@@ -698,7 +702,7 @@ Day-to-day commands, screens, widgets, features, tests, and release builds are i
 Change `AppColors.brand` to recolor the app. Add a feature with:
 
 ```bash
-dart run tool/awesome.dart feature create orders
+dart run tool/fcar.dart feature create orders
 ```
 
 Then register its screen in `lib/core/routing/app_router.dart`.
@@ -727,7 +731,7 @@ Commit the generated files. Do not edit `*.freezed.dart` or `*.g.dart`.
 dart format --output=none --set-exit-if-changed .
 flutter analyze
 flutter test
-dart run tool/awesome.dart validate
+dart run tool/fcar.dart validate
 ```
 
 ## Release
@@ -771,7 +775,7 @@ ${includeAuth ? '- Sample sign-in lives in `lib/features/auth`. Do not log token
 
 ## Checks
 
-Run `dart format`, `flutter analyze`, `flutter test`, and `dart run tool/awesome.dart validate` before calling a task done.
+Run `dart format`, `flutter analyze`, `flutter test`, and `dart run tool/fcar.dart validate` before calling a task done.
 
 After a Freezed or JSON model change, run `dart run build_runner build --delete-conflicting-outputs`.
 ''';
@@ -793,7 +797,7 @@ Domain code does not import Flutter or Dio. A screen calls a use case. Repositor
 ${includeAuth ? 'Sign-in is the `auth` feature. The router waits on the splash screen until a stored session is restored.\n' : ''}
 ## Where to add work
 
-- A feature: `lib/features/<feature>/`, or `dart run tool/awesome.dart feature create <name>`.
+- A feature: `lib/features/<feature>/`, or `dart run tool/fcar.dart feature create <name>`.
 - A widget used by one feature: `lib/features/<feature>/presentation/widgets/`.
 - A widget used by two features: `lib/shared/widgets/`.
 - A screen: the feature `presentation/screens/` folder, then a `GoRoute`.
@@ -816,7 +820,7 @@ String _development(bool includeAuth) {
 3. Change `AppColors.brand` for the brand color.
 4. Add a screen under the feature that owns it and register a route.
 5. Put a reusable widget in `lib/shared/widgets` only when a second feature uses it.
-6. Add a feature with `dart run tool/awesome.dart feature create <name>`.
+6. Add a feature with `dart run tool/fcar.dart feature create <name>`.
 7. Call external services through a repository. Keep keys out of the repo.
 8. Add a unit test for the repository and a widget test for the screen.
 9. Run the checks below.
@@ -827,7 +831,7 @@ String _development(bool includeAuth) {
 dart format .
 flutter analyze
 flutter test
-dart run tool/awesome.dart validate
+dart run tool/fcar.dart validate
 ```
 
 ## Release builds
@@ -866,11 +870,11 @@ Directory _snapshot(Directory root) {
       .toIso8601String()
       .replaceAll(':', '')
       .replaceAll('.', '');
-  final snapshot = Directory(_join(_join(root.path, '.awesome-backup'), stamp));
+  final snapshot = Directory(_join(_join(root.path, '.fcar-backup'), stamp));
   snapshot.createSync(recursive: true);
   for (final entity in root.listSync(followLinks: false)) {
     final name = _baseName(entity.path);
-    if (name == '.awesome-backup' ||
+    if (name == '.fcar-backup' ||
         name == '.git' ||
         name == '.dart_tool' ||
         name == 'build') {
@@ -889,7 +893,7 @@ Directory _snapshot(Directory root) {
 void _restoreSnapshot(Directory root, Directory snapshot) {
   for (final entity in root.listSync(followLinks: false)) {
     final name = _baseName(entity.path);
-    if (name == '.awesome-backup') {
+    if (name == '.fcar-backup') {
       continue;
     }
     entity.deleteSync(recursive: true);

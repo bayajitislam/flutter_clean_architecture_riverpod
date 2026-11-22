@@ -96,7 +96,7 @@ const requiredProjectPaths = [
   'env/dev.json.example',
   'env/staging.json.example',
   'env/prod.json.example',
-  'bin/awesome.dart',
+  'bin/fcar.dart',
 ];
 
 const requiredDependencies = [

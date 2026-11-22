@@ -1,3 +1,4 @@
+import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:material_ui/material_ui.dart';
 
 /// Centered progress indicator for screens that are waiting on startup.
@@ -13,7 +14,10 @@ class AppLoading extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const CircularProgressIndicator(),
-          if (message != null) ...[const SizedBox(height: 16), Text(message!)],
+          if (message != null) ...[
+            const SizedBox(height: AppSpacing.medium),
+            Text(message!),
+          ],
         ],
       ),
     );

@@ -53,7 +53,7 @@ Widgets use the same theme on mobile, tablet, and desktop. Light and dark differ
 
 ## Contributing a widget or screen
 
-Shared widgets live in `lib/shared` when more than one feature uses them, and in `lib/core/widgets` when they are application controls. A widget used by one feature stays in that feature. Screens compose those widgets and call use cases. Add the screen with `dart run tool/awesome.dart feature create <name>`, then register its route.
+Shared widgets live in `lib/shared` when more than one feature uses them, and in `lib/core/widgets` when they are application controls. A widget used by one feature stays in that feature. Screens compose those widgets and call use cases. Add the screen with `dart run tool/fcar.dart feature create <name>`, then register its route.
 
 ## Do not
 

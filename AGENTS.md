@@ -20,7 +20,7 @@ This is a production-oriented Flutter application built with feature-first clean
 - Flutter Secure Storage for tokens
 - Shared preferences for non-sensitive settings
 - flutter_devlog for logging, through `AppLogger`
-- `material_ui` for Material widgets
+- `material_ui` for Material widgets (not `package:flutter/material.dart`; see `docs/decisions/0008-material-ui.md`)
 - Repository contracts in the domain layer
 
 Do not add a second state manager, router, or HTTP client. Do not add a package that the task does not need. Freezed rules are in `.agent/rules/code_generation.md`.
@@ -45,14 +45,14 @@ Do not add a second state manager, router, or HTTP client. Do not add a package 
 From the project root:
 
 ```bash
-dart run tool/awesome.dart create my_shop --output ../my_shop
-dart run :awesome init my_shop
-dart run :awesome rename my_app
-dart run :awesome feature create products
-dart run :awesome validate
+dart run tool/fcar.dart create my_shop --output ../my_shop
+dart run :fcar init my_shop
+dart run :fcar rename my_app
+dart run :fcar feature create products
+dart run :fcar validate
 ```
 
-`tool/awesome.dart` and `tool/cli.dart` run the same commands. `create` writes an independent app and does not modify this starter. `init` rebrands a GitHub template checkout in place. Do not run `init` on this starter if it should stay the template. `--dry-run` prints planned edits. Feature generation refuses to overwrite a file unless `--force` is set. Rename edits known identity fields and leaves signing, Firebase files, entitlements, and URL schemes alone. The handoff guide is `docs/guides/handoff.md`.
+`tool/fcar.dart` and `tool/cli.dart` run the same commands. `create` writes an independent app and does not modify this starter. `init` rebrands a GitHub template checkout in place. Do not run `init` on this starter if it should stay the template. `--dry-run` prints planned edits. Feature generation refuses to overwrite a file unless `--force` is set. Rename edits known identity fields and leaves signing, Firebase files, entitlements, and URL schemes alone. The handoff guide is `docs/guides/handoff.md`.
 
 ## State, API, and UI
 
@@ -84,7 +84,7 @@ dart run :awesome validate
 
 - Unit-test use cases, repositories, and pure mappings.
 - Widget-test important screens and forms.
-- Run `dart format`, `flutter analyze`, the relevant `flutter test`, and `dart run :awesome validate` before calling a task done.
+- Run `dart format`, `flutter analyze`, the relevant `flutter test`, and `dart run :fcar validate` before calling a task done.
 - After a Freezed or JSON model change, run `dart run build_runner build --delete-conflicting-outputs`. Do not hand-edit the generated files.
 
 ## Workflow

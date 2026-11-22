@@ -27,7 +27,7 @@ Start with one screen. `ResponsiveBody` keeps a single column readable. Add tabl
 ## Features
 
 ```bash
-dart run :awesome feature create orders
+dart run :fcar feature create orders
 ```
 
 Use the layers the feature needs. A page with no business rule can be presentation-only. A page that loads remote data gets an entity, a repository contract, a use case, and a data implementation that returns `Result<T>`.

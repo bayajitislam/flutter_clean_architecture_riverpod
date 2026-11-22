@@ -120,7 +120,7 @@ void main() {
     final readme = _read(checkout, 'README.md');
     expect(readme, contains('# My Shop'));
     expect(File(_join(checkout, 'CONTRIBUTING.md')).existsSync(), isFalse);
-    expect(Directory(_join(checkout, '.awesome-backup')).existsSync(), isTrue);
+    expect(Directory(_join(checkout, '.fcar-backup')).existsSync(), isTrue);
 
     final again = initProject(
       root: checkout,

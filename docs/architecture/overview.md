@@ -33,7 +33,7 @@ One feature does not import another feature's `data` or `domain` folder. Navigat
 
 `lib/core/routing` may import feature screens and presentation providers. It does not import feature data or domain.
 
-`dart run :awesome validate` checks these imports, including exports and relative paths.
+`dart run :fcar validate` checks these imports, including exports and relative paths.
 
 ## Repository pattern
 

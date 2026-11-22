@@ -23,13 +23,17 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      obscureText: obscureText,
-      keyboardType: keyboardType,
-      textInputAction: textInputAction,
-      onSubmitted: onSubmitted,
-      decoration: InputDecoration(labelText: label, errorText: errorText),
+    return Semantics(
+      textField: true,
+      label: label,
+      child: TextField(
+        controller: controller,
+        obscureText: obscureText,
+        keyboardType: keyboardType,
+        textInputAction: textInputAction,
+        onSubmitted: onSubmitted,
+        decoration: InputDecoration(labelText: label, errorText: errorText),
+      ),
     );
   }
 }

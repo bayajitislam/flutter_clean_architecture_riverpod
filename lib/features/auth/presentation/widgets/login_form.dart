@@ -1,5 +1,7 @@
+import 'package:flutter_clean_architecture_riverpod/core/theme/app_spacing.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_button.dart';
 import 'package:flutter_clean_architecture_riverpod/core/widgets/app_text_field.dart';
+import 'package:flutter_clean_architecture_riverpod/features/auth/presentation/auth_strings.dart';
 import 'package:material_ui/material_ui.dart';
 
 /// Email and password fields for [LoginScreen].
@@ -30,27 +32,30 @@ class LoginForm extends StatelessWidget {
       children: [
         AppTextField(
           controller: emailController,
-          label: 'Email',
+          label: AuthStrings.emailLabel,
           errorText: emailError,
           keyboardType: TextInputType.emailAddress,
           textInputAction: TextInputAction.next,
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: AppSpacing.medium),
         AppTextField(
           controller: passwordController,
-          label: 'Password',
+          label: AuthStrings.passwordLabel,
           errorText: passwordError,
           obscureText: true,
           textInputAction: TextInputAction.done,
           onSubmitted: (_) => onSubmit(),
         ),
         if (failureMessage != null) ...[
-          const SizedBox(height: 16),
-          Text(failureMessage!, textAlign: TextAlign.center),
+          const SizedBox(height: AppSpacing.medium),
+          Semantics(
+            liveRegion: true,
+            child: Text(failureMessage!, textAlign: TextAlign.center),
+          ),
         ],
-        const SizedBox(height: 24),
+        const SizedBox(height: AppSpacing.large),
         AppButton(
-          label: 'Sign in',
+          label: AuthStrings.signIn,
           isLoading: isSubmitting,
           onPressed: onSubmit,
         ),

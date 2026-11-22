@@ -19,7 +19,7 @@
 - [ ] `dart format --output=none --set-exit-if-changed .`
 - [ ] `flutter analyze`
 - [ ] `flutter test`
-- [ ] `dart run :awesome validate`
+- [ ] `dart run :fcar validate`
 - [ ] Other:
 
 ## Screenshots

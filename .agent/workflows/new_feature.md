@@ -3,9 +3,9 @@
 Prefer the generator from the project root:
 
 ```bash
-dart run :awesome feature create products
-dart run :awesome feature create products --dry-run
-dart run :awesome feature create settings --presentation-only
+dart run :fcar feature create products
+dart run :fcar feature create products --dry-run
+dart run :fcar feature create settings --presentation-only
 ```
 
 `products` creates data, domain, and presentation files, plus a repository test and a screen test. The remote data source throws `UnimplementedError` until an approved endpoint exists. The command does not edit `app_router.dart` and does not replace existing files unless `--force` is set. `--dry-run` prints the file list.

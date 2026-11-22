@@ -1,6 +1,6 @@
 # Releasing
 
-No public release has been published. Do not tag a release or change `pubspec.yaml` unless the maintainers ask for it.
+Tagged releases start at `v0.1.0`. Bump `pubspec.yaml` and `CHANGELOG.md` in the same PR as the tag.
 
 ## Version numbers
 
@@ -10,7 +10,7 @@ This project uses semantic versioning.
 - **MINOR** for a backward-compatible feature.
 - **PATCH** for a backward-compatible fix.
 
-`pubspec.yaml` uses Flutter's `version: x.y.z+build`. The `+build` number is the template build, not a store build of a product app. People who run `awesome create` replace the identity. They choose their own store version after that.
+`pubspec.yaml` uses Flutter's `version: x.y.z+build`. The `+build` number is the template build, not a store build of a product app. People who run `fcar create` replace the identity. They choose their own store version after that.
 
 ## Changelog
 
@@ -29,7 +29,7 @@ When the maintainers publish a version:
 dart format --output=none --set-exit-if-changed .
 flutter analyze
 flutter test
-dart run :awesome validate
+dart run :fcar validate
 dart run build_runner build --delete-conflicting-outputs
 git diff --exit-code
 flutter build web

@@ -4,7 +4,7 @@ Thanks for helping improve this starter kit. Changes should stay useful for peop
 
 ## Create an application
 
-People who want their own app should not fork this repository and keep editing it as the starter. Use `dart run tool/awesome.dart create` or the GitHub template `init` flow in [docs/guides/handoff.md](docs/guides/handoff.md).
+People who want their own app should not fork this repository and keep editing it as the starter. Use `dart run tool/fcar.dart create` or the GitHub template `init` flow in [docs/guides/handoff.md](docs/guides/handoff.md).
 
 ## Fork and clone
 
@@ -57,7 +57,7 @@ dart format .
 dart format --output=none --set-exit-if-changed .
 flutter analyze
 flutter test
-dart run :awesome validate
+dart run :fcar validate
 ```
 
 `dart run tool/cli.dart` is the same CLI. `validate` checks layout, identity, architecture imports, env examples, and required files.
@@ -75,8 +75,8 @@ dart run :awesome validate
 From the repository root:
 
 ```bash
-dart run :awesome feature create products --dry-run
-dart run :awesome feature create products
+dart run :fcar feature create products --dry-run
+dart run :fcar feature create products
 ```
 
 The command writes data, domain, presentation, a repository test, and a screen test. The remote source throws `UnimplementedError` until a real endpoint is agreed. It does not edit the router and does not overwrite a file unless you pass `--force`.

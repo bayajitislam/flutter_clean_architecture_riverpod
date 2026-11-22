@@ -59,7 +59,7 @@ env/*.json
 **/.flutter-plugins-dependencies
 
 # Snapshot taken before in-place project initialization.
-.awesome-backup/
+.fcar-backup/
 
 # Signing secrets
 **/key.properties

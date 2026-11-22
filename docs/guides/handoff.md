@@ -7,12 +7,12 @@ Flutter Clean Architecture Riverpod is the starter kit. A generated application 
 From this repository:
 
 ```bash
-dart run tool/awesome.dart create my_shop
+dart run tool/fcar.dart create my_shop
 ```
 
 That creates `../my_shop` next to this repository. You can also pass an absolute `--output` path. Relative paths with `..` are supported.
 
-`dart run :awesome create my_shop` does the same thing. The package name is `my_shop`. The display name defaults to `My Shop`. The bundle id keeps the current organization prefix and replaces the last segment.
+`dart run :fcar create my_shop` does the same thing. The package name is `my_shop`. The display name defaults to `My Shop`. The bundle id keeps the current organization prefix and replaces the last segment.
 
 Useful flags:
 
@@ -40,10 +40,10 @@ On a terminal, a missing package name is prompted. Every other value has a defau
 4. Initialize it:
 
 ```bash
-dart run tool/awesome.dart init my_shop --display-name "My Shop"
+dart run tool/fcar.dart init my_shop --display-name "My Shop"
 ```
 
-`init` rewrites that checkout in place. It records a snapshot under `.awesome-backup/` first. If initialization fails, that snapshot is restored. The folder is gitignored. Delete it after you have checked the result.
+`init` rewrites that checkout in place. It records a snapshot under `.fcar-backup/` first. If initialization fails, that snapshot is restored. The folder is gitignored. Delete it after you have checked the result.
 
 Running `init` again with the same package name does nothing. Pass `--force` only to rename an application that was already initialized. A forced run does not delete features you added.
 
