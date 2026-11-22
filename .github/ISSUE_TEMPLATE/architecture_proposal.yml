@@ -1,0 +1,40 @@
+name: Architecture proposal
+description: Propose a structural change that more than one feature would follow
+title: "architecture: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for a change to layering, state, navigation, theming, or the CLI. Small bug fixes use the bug report.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What is hard to change or understand today?
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Proposed decision
+      description: The rule or structure you want, and which existing files it would touch.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: What gets easier, what breaks, and how existing features would migrate.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Backward compatibility
+      description: Say whether generated projects or current features must change.

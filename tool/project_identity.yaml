@@ -1,0 +1,4 @@
+package_name: "flutter_clean_architecture_riverpod"
+display_name: "Flutter Clean Architecture Riverpod"
+bundle_id: "com.flutter.cleanarchitectureriverpod"
+description: "Feature-first clean architecture Flutter starter with Riverpod"

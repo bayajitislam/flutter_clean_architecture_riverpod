@@ -1,0 +1,24 @@
+name: Documentation
+description: Report a doc that is missing, wrong, or hard to follow
+title: "docs: "
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Where
+      description: File name, section, or the task you were trying to complete.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested change
+      description: The wording or page you would add. Note if the code and the doc disagree.
+    validations:
+      required: true

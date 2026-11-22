@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a defect in the starter kit
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the defect well enough that someone else can reproduce it. Do not include API keys, tokens, passwords, or private URLs.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: What you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run this command
+        2. Open this screen
+        3. See this error
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Flutter version, Dart version, operating system, and the command you ran.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste the relevant analyzer, test, or runtime output. Remove secrets first.
+      render: text
