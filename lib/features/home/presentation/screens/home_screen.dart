@@ -71,17 +71,8 @@ class HomeScreen extends ConsumerWidget {
 
 ({IconData icon, String tooltip}) _nextTheme(ThemeMode mode) {
   return switch (mode) {
-    ThemeMode.light => (
-      icon: AppIcons.darkMode,
-      tooltip: 'Use dark theme',
-    ),
-    ThemeMode.dark => (
-      icon: AppIcons.systemMode,
-      tooltip: 'Use system theme',
-    ),
-    ThemeMode.system => (
-      icon: AppIcons.lightMode,
-      tooltip: 'Use light theme',
-    ),
+    ThemeMode.light => (icon: AppIcons.darkMode, tooltip: 'Use dark theme'),
+    ThemeMode.dark => (icon: AppIcons.systemMode, tooltip: 'Use system theme'),
+    ThemeMode.system => (icon: AppIcons.lightMode, tooltip: 'Use light theme'),
   };
 }
