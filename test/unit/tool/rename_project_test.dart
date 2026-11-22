@@ -153,6 +153,32 @@ void main() {
       }
     });
 
+    test('accepts a sibling path written with ..', () {
+      final destination = Directory('${source.path}/../sibling_app');
+
+      createProject(
+        source: source,
+        output: destination,
+        packageName: 'sibling_app',
+      );
+
+      expect(_read(destination, 'pubspec.yaml'), contains('name: sibling_app'));
+      if (destination.existsSync()) {
+        destination.deleteSync(recursive: true);
+      }
+    });
+
+    test('rejects an output directory inside the source', () {
+      expect(
+        () => createProject(
+          source: source,
+          output: Directory(_path(source, 'nested_app')),
+          packageName: 'nested_app',
+        ),
+        throwsA(isA<ProjectToolException>()),
+      );
+    });
+
     test('copies the template and renames only the copy', () {
       final destination = Directory(_path(parent, 'client_app'));
 

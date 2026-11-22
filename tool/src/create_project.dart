@@ -144,15 +144,40 @@ void _copyChildren(Directory source, Directory output) {
 }
 
 void _rejectNestedOutput(Directory source, Directory output) {
-  final sourcePath = source.absolute.path;
-  final outputPath = output.absolute.path;
+  final sourcePath = _normalizePath(source.absolute.path);
+  final outputPath = _normalizePath(output.absolute.path);
   final separator = Platform.pathSeparator;
   final nested =
       outputPath == sourcePath ||
       outputPath.startsWith('$sourcePath$separator');
   if (nested) {
-    throw ProjectToolException('Output must be outside the source project.');
+    throw ProjectToolException(
+      'Output must be outside the source project. '
+      'Use an absolute path or omit --output to create a sibling folder.',
+    );
   }
+}
+
+/// Collapses `.` and `..` so `../app` is not treated as inside the source.
+String _normalizePath(String path) {
+  final separator = Platform.pathSeparator;
+  final parts = <String>[];
+  for (final part in path.split(separator)) {
+    if (part.isEmpty || part == '.') {
+      continue;
+    }
+    if (part == '..') {
+      if (parts.isNotEmpty) {
+        parts.removeLast();
+      }
+      continue;
+    }
+    parts.add(part);
+  }
+  if (path.startsWith(separator)) {
+    return '$separator${parts.join(separator)}';
+  }
+  return parts.join(separator);
 }
 
 bool _skippedFile(String name, {required String parent}) {

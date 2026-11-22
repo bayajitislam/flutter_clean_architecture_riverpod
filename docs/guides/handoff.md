@@ -7,8 +7,10 @@ Flutter Clean Architecture Riverpod is the starter kit. A generated application 
 From this repository:
 
 ```bash
-dart run tool/awesome.dart create my_shop --output ../my_shop
+dart run tool/awesome.dart create my_shop
 ```
+
+That creates `../my_shop` next to this repository. You can also pass an absolute `--output` path. Relative paths with `..` are supported.
 
 `dart run :awesome create my_shop` does the same thing. The package name is `my_shop`. The display name defaults to `My Shop`. The bundle id keeps the current organization prefix and replaces the last segment.
 

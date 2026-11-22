@@ -114,7 +114,7 @@ The app stores light, dark, or system in shared preferences. System mode follows
 `dart run tool/awesome.dart`, `dart run :awesome`, and `dart run tool/cli.dart` run the same commands.
 
 ```bash
-dart run tool/awesome.dart create my_shop --output ../my_shop
+dart run tool/awesome.dart create my_shop
 dart run tool/awesome.dart init my_shop
 dart run :awesome feature create products
 dart run :awesome validate
